@@ -1,0 +1,846 @@
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../public/font/Inter.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon-flag {
+  width: 32px;
+  height: 16px;
+}
+
+.icon-flag-wrapper {
+  width: 40px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.icon-flag-wrapper:last-child {
+  margin: 0;
+}
+
+.no-before::before {
+  content: none;
+}
+
+.hamburger {
+  position: relative;
+  z-index: 50;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.hamburger-span {
+  position: relative;
+  font-size: 0;
+  width: 25px;
+  height: 2px;
+  display: block;
+  background: #fff;
+  transition: all 0.3s ease-in-out;
+}
+.hamburger-span::before,
+.hamburger-span::after {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  display: block;
+  background: #fff;
+  content: '';
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger-span-bright {
+  position: relative;
+  font-size: 0;
+  width: 25px;
+  height: 2px;
+  display: block;
+  background: #0c172c;
+  transition: all 0.3s ease-in-out;
+}
+.hamburger-span-bright::before,
+.hamburger-span-bright::after {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  display: block;
+  background: #0c172c;
+  content: '';
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger-span::before {
+  top: -10px;
+}
+
+.hamburger-span::after {
+  bottom: -10px;
+}
+
+.hamburger-span-bright::before {
+  top: -10px;
+}
+
+.hamburger-span-bright::after {
+  bottom: -10px;
+}
+
+.hamburger-open {
+  background-color: transparent;
+}
+
+.hamburger-open-bright {
+  background-color: transparent;
+}
+
+.hamburger-open::before {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #fff;
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.hamburger-open::after {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #fff;
+  bottom: 0;
+  transform: rotate(-45deg);
+}
+
+.hamburger-open-bright::before {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #0c172c;
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.hamburger-open-bright::after {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #0c172c;
+  bottom: 0;
+  transform: rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+
+@keyframes priceImg {
+  0%,
+  100% {
+    rotate: -10deg;
+  }
+  50% {
+    rotate: 80deg;
+  }
+}
+@keyframes priceNew {
+  0%,
+  100% {
+    rotate: 10deg;
+  }
+  50% {
+    rotate: -15deg;
+    top: calc(35% + 15px);
+    left: calc(25% - 15px);
+  }
+}
+
+@keyframes scaleUp {
+  0%,
+  100% {
+    left: 20%;
+    top: 60%;
+  }
+  50% {
+    left: 23%;
+    top: 58%;
+  }
+}
+
+@keyframes scaleUp1 {
+  0%,
+  100% {
+    right: 25%;
+    bottom: 25%;
+  }
+  50% {
+    right: 22%;
+    bottom: 27%;
+  }
+}
+
+@keyframes scaleUp2 {
+  0%,
+  100% {
+    left: 13%;
+    top: 65%;
+  }
+  50% {
+    left: 15%;
+    top: 67%;
+  }
+}
+
+@keyframes scaleUp3 {
+  0%,
+  100% {
+    left: 15%;
+    bottom: 15%;
+  }
+  50% {
+    left: 18%;
+    bottom: 12%;
+  }
+}
+
+@keyframes scaleUp4 {
+  0%,
+  100% {
+    right: 30%;
+    bottom: 25%;
+  }
+  50% {
+    right: 33%;
+    bottom: 28%;
+  }
+}
+@keyframes scaleUp5 {
+  0%,
+  100% {
+    right: 31%;
+    bottom: 15%;
+  }
+  50% {
+    right: 33%;
+    bottom: 10%;
+  }
+}
+
+.scale-price-image {
+  animation: priceImg 2s ease-in-out infinite;
+}
+
+.scale-price-new {
+  animation: priceNew 2s ease-in-out infinite;
+}
+
+.scale-up-1 {
+  animation: scaleUp 2s ease-in-out infinite;
+}
+
+.scale-up-2 {
+  animation: scaleUp1 2s ease-in-out infinite;
+}
+
+.scale-up-3 {
+  animation: scaleUp2 2s ease-in-out infinite;
+}
+
+.scale-up-4 {
+  animation: scaleUp3 2s ease-in-out infinite;
+}
+
+.scale-up-5 {
+  animation: scaleUp4 2s ease-in-out infinite;
+}
+.scale-up-6 {
+  animation: scaleUp5 2s ease-in-out infinite;
+}
+.ribbon {
+  --f: 8px;
+  /* control the folded part*/
+  --r: 8px;
+  /* control the ribbon shape */
+
+  position: absolute;
+  top: 10px;
+  padding-inline: 10px;
+  background: #7065f0;
+  border-bottom: var(--f) solid #0005;
+  color: #fff;
+  font-family: sans-serif;
+}
+
+.lefts {
+  left: calc(-1 * var(--f));
+  border-right: var(--r) solid #0000;
+  clip-path: polygon(
+    100% 0,
+    0 0,
+    0 calc(100% - var(--f)),
+    var(--f) 100%,
+    var(--f) calc(100% - var(--f)),
+    100% calc(100% - var(--f)),
+    calc(100%) calc(50% - var(--f) / 2)
+  );
+}
+
+.property-price {
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+}
+
+.house-card:hover .property-price {
+  opacity: 1;
+  transition: 500ms ease-in-out;
+}
+
+.house-card:hover .card-img {
+  transform: scale(1.3);
+  transition: 500ms ease-in-out;
+}
+
+.advanced-cropper__background-wrapper {
+  background: #484848;
+}
+
+@media (max-width: 480px) {
+  .profile-wrapper {
+    flex-flow: column;
+    gap: 16px;
+  }
+
+  .profile-photo {
+    width: 100%;
+  }
+}
+
+.landing-light {
+  background-image: linear-gradient(#ffffff, #eff2f6, #eff4fd);
+  height: 900px;
+}
+
+.landing-dark {
+  background-image: linear-gradient(#1e293b, #121b2c, #121b2c);
+  height: 900px;
+}
+
+.invest-underline-first {
+  height: 3px;
+  left: 0;
+  background-color: yellowgreen;
+  animation: drawing-first 2s 0s ease-in-out forwards;
+  border-radius: 4px;
+}
+
+@keyframes drawing-first {
+  from {
+    width: 0;
+    bottom: 6px;
+  }
+  to {
+    width: 100%;
+    bottom: 6px;
+  }
+}
+.invest-underline-second {
+  height: 3px;
+  right: 0;
+  bottom: 3px;
+  background-color: yellowgreen;
+  animation: drawing-second 0.5s 2s ease-in-out forwards;
+  border-radius: 4px;
+  transform: rotate(-3deg);
+}
+
+@keyframes drawing-second {
+  from {
+    width: 0;
+  }
+  to {
+    width: 80%;
+  }
+}
+.invest-underline-third {
+  height: 3px;
+  left: 20%;
+  bottom: 0px;
+  background-color: yellowgreen;
+  animation: drawing-third 1.3s 2.5s ease-in-out forwards;
+  border-radius: 4px;
+}
+
+@keyframes drawing-third {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.shiny {
+  animation: shiny linear 5s infinite;
+}
+@keyframes shiny {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.left-first {
+  height: 5px;
+  background-color: yellowgreen;
+  animation: left-first 2.4s ease-in-out infinite;
+  transform: rotate(-5deg);
+  border-radius: 4px;
+  animation-play-state: running;
+}
+
+@media (max-width: 768px) {
+  .right-first {
+    display: none;
+  }
+  .left-third {
+    display: none;
+  }
+}
+
+@keyframes left-first {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  10% {
+    width: 0;
+    opacity: 0;
+  }
+  30% {
+    width: 30px;
+    opacity: 1;
+  }
+  85% {
+    width: 30px;
+    opacity: 1;
+  }
+  95% {
+    width: 30px;
+    opacity: 0;
+  }
+  100% {
+    width: 30px;
+    opacity: 0;
+  }
+}
+.left-second {
+  height: 5px;
+  background-color: yellowgreen;
+  animation: left-second 2.4s ease-in-out infinite;
+  transform: rotate(-40deg);
+  border-radius: 4px;
+  animation-play-state: running;
+}
+
+@keyframes left-second {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  20% {
+    width: 0;
+    opacity: 0;
+  }
+  60% {
+    width: 60px;
+    opacity: 1;
+  }
+  85% {
+    width: 60px;
+    opacity: 1;
+  }
+  100% {
+    width: 60px;
+    opacity: 0;
+  }
+}
+.left-third {
+  height: 5px;
+  background-color: yellowgreen;
+  animation: left-third 2.4s ease-in-out infinite;
+  transform: rotate(-80deg);
+  border-radius: 4px;
+  animation-play-state: running;
+}
+
+@keyframes left-third {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  40% {
+    width: 0;
+    opacity: 0;
+  }
+  70% {
+    width: 60px;
+    opacity: 1;
+  }
+  85% {
+    width: 60px;
+    opacity: 1;
+  }
+  100% {
+    width: 60px;
+    opacity: 0;
+  }
+}
+.right-first {
+  height: 5px;
+  background-color: yellowgreen;
+  animation: left-first 2.4s ease-in-out infinite;
+  transform: rotate(75deg);
+  border-radius: 4px;
+}
+
+@keyframes right-first {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  50% {
+    width: 40px;
+    opacity: 1;
+  }
+  80% {
+    width: 40px;
+    opacity: 1;
+  }
+  100% {
+    width: 20px;
+    opacity: 0;
+  }
+}
+.right-second {
+  height: 5px;
+  background-color: yellowgreen;
+  animation: left-second 2.4s ease-in-out infinite;
+  transform: rotate(45deg);
+  border-radius: 4px;
+}
+
+@keyframes right-second {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  50% {
+    width: 60px;
+    opacity: 1;
+  }
+  80% {
+    width: 60px;
+    opacity: 1;
+  }
+  100% {
+    width: 60px;
+    opacity: 0;
+  }
+}
+.right-third {
+  height: 5px;
+  background-color: yellowgreen;
+  animation: left-third 2.4s ease-in-out infinite;
+  transform: rotate(15deg);
+  border-radius: 4px;
+}
+
+@keyframes right-third {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  50% {
+    width: 60px;
+    opacity: 1;
+  }
+  80% {
+    width: 60px;
+    opacity: 1;
+  }
+  100% {
+    width: 20px;
+    opacity: 0;
+  }
+}
+
+@keyframes ToScaleUp {
+  0%,
+  100% {
+    scale: 250%;
+  }
+  50% {
+    scale: 500%;
+  }
+}
+
+@keyframes ToScaleUp2 {
+  0%,
+  100% {
+    scale: 150%;
+  }
+  50% {
+    scale: 300%;
+  }
+}
+
+@keyframes ToScaleUp3 {
+  0%,
+  100% {
+    scale: 100%;
+    rotate: -20deg;
+  }
+  50% {
+    scale: 200%;
+    rotate: 20deg;
+  }
+}
+
+@keyframes ToScaleUp4 {
+  0%,
+  100% {
+    scale: 150%;
+  }
+  50% {
+    scale: 0%;
+  }
+}
+
+@keyframes ToScaleUp5 {
+  0%,
+  100% {
+    scale: 0%;
+  }
+  50% {
+    scale: 150%;
+  }
+}
+
+@keyframes ToScaleUp6 {
+  0%,
+  100% {
+    scale: 150%;
+    transform: rotateY(0deg);
+  }
+  50% {
+    scale: 0%;
+    transform: rotateY(180deg);
+  }
+}
+
+.icon1 {
+  animation: ToScaleUp 1.6s ease-in-out infinite;
+}
+
+.icon2 {
+  animation: ToScaleUp2 1.6s ease-in-out infinite;
+}
+
+#handboy {
+  animation: swing ease-in-out 1.3s infinite alternate;
+  transform-origin: 98% 98%;
+  transform-box: fill-box;
+}
+
+#girllight {
+  animation: swing ease-in-out 1.3s infinite alternate;
+  transform-origin: 0% 97%;
+  transform-box: fill-box;
+}
+
+#hairgirl {
+  animation: swinghair ease-in-out 1.3s infinite alternate;
+  transform-origin: 60% 0%;
+  transform-box: fill-box;
+}
+
+#zero {
+  transform-origin: bottom;
+  transform-box: fill-box;
+}
+
+/*************swing************/
+@keyframes swing {
+  0% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+
+/*************swing hair************/
+@keyframes swinghair {
+  0% {
+    transform: rotate(6deg);
+  }
+  100% {
+    transform: rotate(-6deg);
+  }
+}
+
+.error-404 {
+  background-image: linear-gradient(#ffffff, #eff2f6, #eff4fd);
+}
+.icon3 {
+  animation: ToScaleUp3 1.6s ease-in-out infinite;
+}
+
+.icon4 {
+  animation: ToScaleUp4 1.6s ease-in-out infinite;
+}
+
+.icon5 {
+  animation: ToScaleUp5 1.6s ease-in-out infinite;
+}
+
+.icon6 {
+  animation: ToScaleUp6 1.6s ease-in-out infinite;
+}
+
+@keyframes MoveUpLeft {
+  0% {
+    top: 10%;
+    left: -40px;
+  }
+  5% {
+    top: 10%;
+    left: -40px;
+  }
+  50% {
+    top: 14%;
+    left: 0px;
+  }
+  60% {
+    top: 14%;
+    left: 0px;
+  }
+  95% {
+    top: 10%;
+    left: -40px;
+  }
+  100% {
+    top: 10%;
+    left: -40px;
+  }
+}
+
+@keyframes MoveUpRight {
+  0% {
+    top: 30%;
+    right: -40px;
+  }
+  5% {
+    top: 30%;
+    right: -40px;
+  }
+  50% {
+    top: 26%;
+    right: -80px;
+  }
+  60% {
+    top: 26%;
+    right: -80px;
+  }
+  95% {
+    top: 30%;
+    right: -40px;
+  }
+  100% {
+    top: 30%;
+    right: -40px;
+  }
+}
+.frame1 {
+  position: absolute;
+  top: 10%;
+  left: -40px;
+  animation: MoveUpLeft 1.6s ease-in-out infinite;
+}
+
+.frame2 {
+  position: absolute;
+  top: 30%;
+  right: -40px;
+  animation: MoveUpRight 1.6s ease-in-out infinite;
+}
+
+.image-gallery-image {
+  border-radius: 12px;
+}
+
+.image-gallery-thumbnail-image {
+  border-radius: 6px;
+}
+
+.image-gallery-thumbnails-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.image-gallery-thumbnail {
+  width: calc(20% - 10px) !important;
+}
+
+.price-house {
+  min-height: 300px;
+}
+
+.sticky-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.move-up-down {
+  animation: MoveDown 1s linear infinite;
+}
+
+@keyframes MoveDown {
+  0%,
+  100% {
+    bottom: 20px;
+  }
+  50% {
+    bottom: 40px;
+  }
+}
+
+.price-house-img {
+  object-fit: cover;
+}
